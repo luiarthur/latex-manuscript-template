@@ -1,0 +1,90 @@
+%%% MACROS FOR TEMPLATE %%%
+\usepackage{setspace}  % for manuscript double spacing
+\doublespacing
+\usepackage[margin=1in]{geometry} % set page to 1-inch margins
+
+% Adds settings for hyperlinks. (Mainly for table of contents.)
+\usepackage{hyperref}
+\hypersetup{
+  pdfborder={0 0 0} % removes red box from links
+}
+
+% Math
+\usepackage{amsmath} % for math
+\usepackage{amssymb} % like \Rightarrow
+\usepackage{bm}
+\usepackage{bbm}
+\setlength\parindent{0pt} % Suppresses the indentation of new paragraphs.
+
+% Graphics
+\usepackage{graphicx}  % for figures
+\usepackage{float} % Put figure exactly where I want [H]
+
+% Bibliography
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+% \bibliographystyle{natbib}
+
+% Colors for editing paper.
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\alert}[1]{\color{red}#1\color{black}}
+\newcommand{\todo}[1]{\color{blue}#1\color{black}}
+\newcommand{\edited}[1]{\color{blue}#1\color{black}}
+\usepackage{soul}
+
+% Bold
+\usepackage{bm}
+\usepackage{bbm}
+
+% Big display
+\newcommand{\ds}{\displaystyle}
+
+% Parentheses
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\p}[1]{\left(#1\right)}
+\newcommand{\bk}[1]{\left[#1\right]}
+\newcommand{\bc}[1]{\left\{#1\right\}}
+\newcommand{\abs}[1]{\left|#1\right|}
+
+% Derivatives
+\newcommand{\df}[2]{\frac{d#1}{d#2}}
+\newcommand{\ddf}[2]{\frac{d^2#1}{d{#2}^2}}
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pdd}[2]{\frac{\partial^2#1}{\partial{#2}^2}}
+
+% Distributions
+\newcommand{\Normal}{\text{Normal}}
+\newcommand{\Beta}{\text{Beta}}
+\newcommand{\GammaDist}{\text{Gamma}}
+\newcommand{\InverseGamma}{\text{InverseGamma}}
+\newcommand{\Uniform}{\text{Uniform}}
+\newcommand{\Dirichlet}{\text{Dirichlet}}
+\newcommand{\Categorical}{\text{Categorical}}
+\newcommand{\TruncatedNormal}{\text{TruncatedNormal}}
+\newcommand{\Binomial}{\text{Binomial}}
+\newcommand{\Bernoulli}{\text{Bernoulli}}
+\newcommand{\Poisson}{\text{Poisson}}
+\newcommand{\LogNormal}{\text{LogNormal}}
+\newcommand{\SkewT}{\text{skew-$t$}}
+\newcommand{\Dirac}{\text{Dirac}}
+\newcommand{\DP}{\text{DP}}
+\newcommand\normalpdf[3]{\frac{1}{\sqrt{2\pi#3}}\exp\bc{\frac{-\p{#1-#2}^2}{2#3}}}
+
+% Operators and text.
+\newcommand{\E}{\text{E}}
+\newcommand{\iid}{\overset{iid}{\sim}}
+\newcommand{\ind}{\overset{ind}{\sim}}
+\newcommand{\Ind}[1]{\mathbbm{1}\bc{#1}}
+\def\cpo{\text{CPO}}
+\def\lpml{\text{LPML}}
+\def\data{\text{data}}
+\def\argmin{\text{argmin}}
+\def\argmax{\text{argmax}}
+\def\elbo{\text{ELBO}}
+\def\miss{\text{missing}}
+\def\logit{\text{logit}}
+\def\sigmoid{\text{sigmoid}}
+\def\logistic{\text{logistic}}
+
+% Miscellaneous macros.
+\newcommand{\dquote}[1]{\lq\lq #1\rq\rq} % double quotes

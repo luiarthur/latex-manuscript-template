@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+
+% Macros.
+\input{macros.tex}
+
+\begin{document}
+
+\title{Enter a Title Here}
+\author{
+  First Author\thanks{Institute 1} \and
+  Second Author\thanks{Institute 2} \and
+  Third Author\thanks{Institute 3}
+}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+  \noindent
+  \input{abstract.tex}
+
+  \noindent
+  {\em Keywords:} ~ keyword 1, keyword 2, etc.
+\end{abstract}
+
+% This helps to break long lines that spill over to the margins.
+\sloppy
+
+\input{section-1.tex}
+
+% Flush all graphs so they appear before references.
+\clearpage
+
+% Bibliography
+\bibliography{main.bib}
+\end{document}
