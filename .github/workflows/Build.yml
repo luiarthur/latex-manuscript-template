@@ -1,0 +1,19 @@
+name: Build
+on: [push]
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: src/
+          root_file: main.tex  # TODO: Edit this.
+          args: -pdf
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF  # TODO: Edit this.
+          path: src/main.pdf # TODO: Edit this.
